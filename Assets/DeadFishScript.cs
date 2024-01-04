@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class DeadFishScript : MonoBehaviour
 {
-    public LogicScript logic;
-    public float destroyTimer;
-    public PenguinScript penguin;
+    [SerializeField] private LogicScript logic;
+    [SerializeField] private float destroyTimer;
+    [SerializeField] private PenguinScript penguin;
     
     void Start()
     {

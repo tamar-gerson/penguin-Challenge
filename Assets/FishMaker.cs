@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FishMaker : MonoBehaviour
 {
-    public GameObject fish;
-    public PenguinScript ps;
-    public float spawnRate = 4;
+    [SerializeField] private GameObject fish;
+    [SerializeField] private PenguinScript ps;
+    [SerializeField] private float spawnRate = 4;
     private float timer = 0;
     
     // Start is called before the first frame update

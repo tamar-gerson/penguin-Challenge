@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
-    public Text scoreText;
-    public GameObject gameOverScreen;
+    [SerializeField] private int playerScore;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private GameObject gameOverScreen;
     
     [ContextMenu("Inc")]
     public void addScore()
