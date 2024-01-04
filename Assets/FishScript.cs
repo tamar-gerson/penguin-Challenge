@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
-    [SerializeField] private LogicScript logic;
+    private LogicScript logic;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,9 @@ public class FishScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Fish eaten");
         logic.addScore();
+        Debug.Log("Score: " + logic.getScore());
         Destroy(gameObject);
     }
 }

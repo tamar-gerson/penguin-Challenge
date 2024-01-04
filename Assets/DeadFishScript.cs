@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DeadFishScript : MonoBehaviour
 {
-    [SerializeField] private LogicScript logic;
+    public LogicScript logic;
     [SerializeField] private float destroyTimer;
     [SerializeField] private PenguinScript penguin;
     
@@ -14,6 +14,7 @@ public class DeadFishScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         penguin = GameObject.FindGameObjectWithTag("Penguin").GetComponent<PenguinScript>();
         Destroy(gameObject, destroyTimer);
+        Debug.Log("dead fish destroyed");
     }
     
     void Update()

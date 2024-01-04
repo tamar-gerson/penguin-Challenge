@@ -19,12 +19,19 @@ public class LogicScript : MonoBehaviour
 
     public void restartGame()
     {
+        Debug.Log("Restarting game");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void GameOver()
     {
+        Debug.Log("Game Over");
         gameOverScreen.SetActive(true);
+    }
+    
+    public int getScore()
+    {
+        return playerScore;
     }
     
 }

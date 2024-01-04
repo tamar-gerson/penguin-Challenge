@@ -24,6 +24,7 @@ public class FishMaker : MonoBehaviour
         }
         else
         {
+            Debug.Log("Spawn fish");
             spawnFish();
             timer = 0;
         }

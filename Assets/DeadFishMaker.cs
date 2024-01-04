@@ -21,6 +21,7 @@ public class DeadFishMaker : MonoBehaviour
         }
         else
         {
+            Debug.Log("Spawn dead fish");
             spawnFish();
             timer = 0;
         } 

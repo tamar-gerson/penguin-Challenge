@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 768685392}
-  moveSpeed: 6
+  moveSpeed: 0.2
 --- !u!212 &768685394
 SpriteRenderer:
   m_ObjectHideFlags: 0
