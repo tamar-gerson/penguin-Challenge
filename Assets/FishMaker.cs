@@ -24,7 +24,6 @@ public class FishMaker : MonoBehaviour
         }
         else
         {
-            Debug.Log("Spawn fish");
             spawnFish();
             timer = 0;
         }
@@ -37,8 +36,19 @@ public class FishMaker : MonoBehaviour
         float leftPoint = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
         float rightPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x;
         if (ps.getAlive())
-        {
+        { 
+            Debug.Log("Spawn fish");
             Instantiate(fish, new Vector3(Random.Range(leftPoint, rightPoint), Random.Range(lowestPoint, highestPoint), 0), Quaternion.identity);
         }
+    }
+    
+    public void setSpawnRate(float newSpawnRate)
+    {
+        spawnRate = newSpawnRate;
+    }
+    
+    public float getSpawnRate()
+    {
+        return spawnRate;
     }
 }

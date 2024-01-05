@@ -6,10 +6,12 @@ using UnityEngine;
 public class FishScript : MonoBehaviour
 {
     private LogicScript logic;
+    private PenguinScript penguin;
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        penguin = GameObject.FindGameObjectWithTag("Penguin").GetComponent<PenguinScript>();
     }
     // Update is called once per frame
     void Update()
@@ -18,9 +20,13 @@ public class FishScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Fish eaten");
-        logic.addScore();
-        Debug.Log("Score: " + logic.getScore());
-        Destroy(gameObject);
+        if(other.CompareTag("Penguin") && penguin.getAlive())
+        {
+            Debug.Log("Fish eaten");
+            logic.addScore();
+            Debug.Log("Score: " + logic.getScore());
+            Destroy(gameObject);
+        }
     }
+    
 }

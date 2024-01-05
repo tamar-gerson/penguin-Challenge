@@ -25,14 +25,14 @@ public class PenguinScript : MonoBehaviour
             moveVert = Input.GetAxisRaw("Vertical");
             if (moveHorz < 0 && isAlive)
             {
-                Debug.Log("change scale");
+                //Debug.Log("change scale");
                 transform.localScale = new Vector3(-1, 1, 1);
             }
             else if (moveHorz > 0 && isAlive)
             {
                 // If moving right, you might want to reset the scale to its original state.
                 // If not, the scale will keep accumulating.
-                Debug.Log("change scale");
+                //Debug.Log("change scale");
                 transform.localScale = new Vector3(1, 1, 1);
             }
             // if (moveHorz < 0 && isAlive)

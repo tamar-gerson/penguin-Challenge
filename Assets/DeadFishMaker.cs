@@ -21,7 +21,6 @@ public class DeadFishMaker : MonoBehaviour
         }
         else
         {
-            Debug.Log("Spawn dead fish");
             spawnFish();
             timer = 0;
         } 
@@ -36,7 +35,18 @@ public class DeadFishMaker : MonoBehaviour
 
         if (ps.getAlive())
         {
+            Debug.Log("Spawn dead fish");
             Instantiate(fish, new Vector3(Random.Range(leftPoint, rightPoint), Random.Range(lowestPoint, highestPoint), 0), Quaternion.identity);    
         }
+    }
+    
+    public void setSpawnRate(float newSpawnRate)
+    {
+        spawnRate = newSpawnRate;
+    }
+
+    public float getSpawnRate()
+    {
+        return spawnRate;
     }
 }

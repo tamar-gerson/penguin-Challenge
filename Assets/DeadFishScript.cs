@@ -14,7 +14,6 @@ public class DeadFishScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         penguin = GameObject.FindGameObjectWithTag("Penguin").GetComponent<PenguinScript>();
         Destroy(gameObject, destroyTimer);
-        Debug.Log("dead fish destroyed");
     }
     
     void Update()
@@ -24,8 +23,11 @@ public class DeadFishScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        penguin.isDead();
-        logic.GameOver();
-        Destroy(gameObject);
+        if (other.CompareTag("Penguin") && penguin.getAlive())
+        {
+            penguin.isDead();
+            logic.GameOver();
+            //Destroy(gameObject);
+        }
     }
 }
