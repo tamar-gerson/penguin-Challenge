@@ -10,7 +10,7 @@ public class LogicScript : MonoBehaviour
     [SerializeField] private int playerScore;
     [SerializeField] private Text scoreText;
     [SerializeField] private GameObject gameOverScreen;
-    [SerializeField] private fishSpawnerScript fishSpawner;
+    [SerializeField] private spawnerScript fishSpawner;
     [SerializeField] private Tilemap tilemap;
     [ContextMenu("Inc")]
     public void addScore()
@@ -38,6 +38,7 @@ public class LogicScript : MonoBehaviour
     
     public void crazyMode(int crazyTime)
     {
+        Debug.Log("crazy mode");
         StartCoroutine(CrazyModeCoroutine(crazyTime));
     }
     

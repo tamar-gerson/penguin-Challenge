@@ -13,18 +13,11 @@ public class GummyScript : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         penguin = GameObject.FindGameObjectWithTag("Penguin").GetComponent<PenguinScript>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Penguin") && penguin.getAlive())
         {
-            Debug.Log("crazy mode");
             Destroy(gameObject);
             logic.crazyMode(crazyTime);
         }

@@ -18,7 +18,6 @@ public class fishSpawnerScript : MonoBehaviour
     void Update()
     {
         spawner.spawner(spawnRate, new []{fish,deadfish});
-        
     }
     
     

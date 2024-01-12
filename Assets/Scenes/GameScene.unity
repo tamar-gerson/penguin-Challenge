@@ -123,54 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &101873664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 101873665}
-  - component: {fileID: 101873666}
-  m_Layer: 0
-  m_Name: fishSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &101873665
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101873664}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1986770635}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &101873666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101873664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08d2f5ef883c1c74d93a2de68d0aabe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fish: {fileID: 1779968487368282832, guid: 86a9542548e0a1b4989a8a3ef2a2b53e, type: 3}
-  deadfish: {fileID: 8574616587246644710, guid: 72686bc90f7a0e243bf6bf707229ab2f, type: 3}
-  spawnRate: 4
-  spawner: {fileID: 1986770636}
 --- !u!1 &140081721
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +317,54 @@ Transform:
   - {fileID: 2093988952}
   - {fileID: 755498624}
   - {fileID: 867638692}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &468282710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468282712}
+  - component: {fileID: 468282711}
+  m_Layer: 0
+  m_Name: gummy spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468282711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468282710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6acc62b904b1b04409a6caa923491a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 768685393}
+  objToSpawn:
+  - {fileID: 4461441590527504276, guid: 789b07d12f2140c46b81993946fecb12, type: 3}
+  spawnRate: 6
+--- !u!4 &468282712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468282710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.62737185, y: 0.19770941, z: -9.903782}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
@@ -1096,53 +1096,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1593825117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1593825118}
-  - component: {fileID: 1593825119}
-  m_Layer: 0
-  m_Name: gummySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1593825118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593825117}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1986770635}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1593825119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593825117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127c4c5c51f431b43b66e8e9de759837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gummy: {fileID: 4461441590527504276, guid: 789b07d12f2140c46b81993946fecb12, type: 3}
-  spawnRate: 4
-  spawner: {fileID: 1986770636}
 --- !u!1 &1620866515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1128,7 @@ MonoBehaviour:
   playerScore: 0
   scoreText: {fileID: 624871839}
   gameOverScreen: {fileID: 1411415386}
-  fishSpawner: {fileID: 101873666}
+  fishSpawner: {fileID: 1986770636}
   tilemap: {fileID: 214347894}
 --- !u!4 &1620866517
 Transform:
@@ -1203,7 +1156,7 @@ GameObject:
   - component: {fileID: 1986770635}
   - component: {fileID: 1986770636}
   m_Layer: 0
-  m_Name: spawner
+  m_Name: 'fish spawner '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,9 +1174,7 @@ Transform:
   m_LocalPosition: {x: -0.62737185, y: 0.19770941, z: -9.903782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 101873665}
-  - {fileID: 1593825118}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1986770636
@@ -1239,6 +1190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ps: {fileID: 768685393}
+  objToSpawn:
+  - {fileID: 1779968487368282832, guid: 86a9542548e0a1b4989a8a3ef2a2b53e, type: 3}
+  - {fileID: 8574616587246644710, guid: 72686bc90f7a0e243bf6bf707229ab2f, type: 3}
+  spawnRate: 4
 --- !u!1 &2093988951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1536,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 768685391}
   - {fileID: 1986770635}
+  - {fileID: 468282712}
   - {fileID: 838684170}
   - {fileID: 2098283170}
   - {fileID: 1620866517}

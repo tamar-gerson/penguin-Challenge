@@ -4,41 +4,40 @@ using UnityEngine;
 
 public class spawnerScript : MonoBehaviour
 {
-    //[SerializeField] private GameObject fish;
+    //[SerializeField] private LogicScript ls;
     [SerializeField] private PenguinScript ps;
-    //[SerializeField] private GameObject gummy;
-    //[SerializeField] private float spawnRate = 4;
-    //[SerializeField] private GameObject deadFish;
-    //[SerializeField] private float gummySpawnRate = 8;
-    private float timer = 0;
+    [SerializeField] private GameObject[] objToSpawn;
+    [SerializeField] private float spawnRate;
+    private float _timer = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        //spawn(fish);
-        //spawn(deadFish);
+        foreach (var obj in objToSpawn)
+        {
+            spawn(obj); 
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-       //spawner(spawnRate, new []{fish,deadFish}); 
-       //spawner(gummySpawnRate, new []{gummy}); 
+       spawner(spawnRate, objToSpawn);
     }
     
-    public void spawner(float spawnRate, GameObject[] whatToSpawn)
+    public void spawner(float spawnRate, GameObject[] objToSpawn)
     {
-        if(timer < spawnRate)
+        if(_timer < spawnRate)
         {
-            timer += Time.deltaTime;
+            _timer += Time.deltaTime;
         }
         else
         {
-            foreach (var obj in whatToSpawn)
+            foreach (var obj in objToSpawn)
             {
                spawn(obj); 
             }
-            timer = 0;
+            _timer = 0;
         }
     }
 
@@ -53,5 +52,15 @@ public class spawnerScript : MonoBehaviour
             Debug.Log("Spawn"+ obj.name);
             Instantiate(obj, new Vector3(Random.Range(leftPoint, rightPoint), Random.Range(lowestPoint, highestPoint), 0), Quaternion.identity);
         }
+    }
+
+    public float getSpawnRate()
+    {
+        return spawnRate;
+    }
+    
+    public void setSpawnRate(float newSpawnRate)
+    {
+        spawnRate = newSpawnRate;
     }
 }

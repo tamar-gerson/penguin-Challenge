@@ -11,11 +11,7 @@ public class PenguinScript : MonoBehaviour
     private float moveHorz;
     private bool isAlive = true;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -25,34 +21,12 @@ public class PenguinScript : MonoBehaviour
             moveVert = Input.GetAxisRaw("Vertical");
             if (moveHorz < 0 && isAlive)
             {
-                //Debug.Log("change scale");
                 transform.localScale = new Vector3(-1, 1, 1);
             }
             else if (moveHorz > 0 && isAlive)
             {
-                // If moving right, you might want to reset the scale to its original state.
-                // If not, the scale will keep accumulating.
-                //Debug.Log("change scale");
                 transform.localScale = new Vector3(1, 1, 1);
             }
-            // if (moveHorz < 0 && isAlive)
-            // {
-            //     transform.localScale = new Vector3(-1, 1, 1);
-            //     transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-            // }
-            // else if (moveHorz > 0 && isAlive)
-            // {
-            //     transform.localScale = new Vector3(1, 1, 1);
-            //     transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-            // }
-            // if(moveVert < 0 && isAlive)
-            // {
-            //     transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
-            // }
-            // else if(moveVert > 0 && isAlive)
-            // {
-            //     transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
-            // }
         }
     }
 

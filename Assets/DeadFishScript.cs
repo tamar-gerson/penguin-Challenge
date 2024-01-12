@@ -16,18 +16,12 @@ public class DeadFishScript : MonoBehaviour
         Destroy(gameObject, destroyTimer);
     }
     
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Penguin") && penguin.getAlive())
         {
             penguin.isDead();
             logic.GameOver();
-            //Destroy(gameObject);
         }
     }
 }
