@@ -16,7 +16,7 @@ public class GummyScript : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Penguin") && penguin.getAlive())
+        if(other.CompareTag("Penguin") && penguin.getAlive() && logic.getCrazy() == false)
         {
             Destroy(gameObject);
             logic.crazyMode(crazyTime);

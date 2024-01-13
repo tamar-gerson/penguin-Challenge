@@ -24,5 +24,4 @@ public class FishScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
 }

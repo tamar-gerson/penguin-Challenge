@@ -12,6 +12,8 @@ public class LogicScript : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private spawnerScript fishSpawner;
     [SerializeField] private Tilemap tilemap;
+
+    private bool _inCrazy = false;
     [ContextMenu("Inc")]
     public void addScore()
     {
@@ -39,6 +41,7 @@ public class LogicScript : MonoBehaviour
     public void crazyMode(int crazyTime)
     {
         Debug.Log("crazy mode");
+        _inCrazy = true;
         StartCoroutine(CrazyModeCoroutine(crazyTime));
     }
     
@@ -51,9 +54,15 @@ public class LogicScript : MonoBehaviour
         // Wait for specified seconds
         yield return new WaitForSeconds(crazyTime);
 
+        _inCrazy = false;
         // Do something else after 7 seconds
         fishSpawner.setSpawnRate(originalSpwanRate); 
         tilemap.color = Color.white;
+    }
+    
+    public bool getCrazy()
+    {
+        return _inCrazy;
     }
     
 }
